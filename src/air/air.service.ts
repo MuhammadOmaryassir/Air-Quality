@@ -1,8 +1,4 @@
-import { Model } from 'mongoose';
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Pollution } from './schemas/pollution.schema';
-import { HttpService } from '@nestjs/axios';
 import axios from 'axios';
 
 const externalAPICall = axios.create()
@@ -10,7 +6,6 @@ const externalAPICall = axios.create()
 
 @Injectable()
 export class AirService {
-  constructor(@InjectModel(Pollution.name) private pollutionModel: Model<Pollution>, private readonly httpService: HttpService) {}
 
   async getNearestCityAirData(params) {
     const { lat, lon } = params
