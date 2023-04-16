@@ -3,7 +3,7 @@ import { ApiOperation, ApiParam } from '@nestjs/swagger';
 import { AirService } from './air.service';
 
 
-@Controller('airQuality')
+@Controller('api/airQuality')
 export class AirController {
   constructor(private readonly airService: AirService) { }
 
