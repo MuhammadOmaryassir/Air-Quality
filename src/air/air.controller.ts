@@ -25,4 +25,10 @@ export class AirController {
     }
   }
 
+  @Get("mostPollutedTime")
+  @ApiOperation({ summary: 'the most polluted time paris Zone' })
+  mostPolluted()  {
+    return this.airService.mostPollutedTimeParisZone();
+  }
+
 }

@@ -9,7 +9,7 @@ export class Pollution {
   city: string;
 
   @Prop()
-  latitude: number;
+  latitude: string;
 
   @Prop()
   longitude: string;

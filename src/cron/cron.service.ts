@@ -8,7 +8,6 @@ export class SchedulerService {
     constructor( private readonly airService: AirService ) {}
     @Cron('* * * * *')
     async pollutionCron() {
-      let x = await this.airService.getNearestCityAirData({lat:"48.856613", lon:"2.352222"});
-      console.log(x.city , new Date())
+     await this.airService.getNearestCityAirData({lat:"48.856613", lon:"2.352222"},true);
     }
 }
