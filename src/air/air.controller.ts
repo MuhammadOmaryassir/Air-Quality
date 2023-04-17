@@ -8,7 +8,7 @@ export class AirController {
   constructor(private readonly airService: AirService) { }
 
   @Get("/nearestCity")
-  @ApiOperation({ summary: 'get air quality for the nearest city' })
+  @ApiOperation({ summary: 'Get air quality for the nearest city' })
   @ApiParam({ name: "lat", type: "string", required: false })
   @ApiParam({ name: "lon", type: "string", required: false })
 
@@ -26,7 +26,7 @@ export class AirController {
   }
 
   @Get("mostPollutedTime")
-  @ApiOperation({ summary: 'the most polluted time paris Zone' })
+  @ApiOperation({ summary: 'The most polluted time paris Zone' })
   mostPolluted()  {
     return this.airService.mostPollutedTimeParisZone();
   }

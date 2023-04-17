@@ -3,8 +3,8 @@ REST API responsible for exposing “the air quality information” of a nearest
 https://www.iqair.com/fr/commercial/air-quality-monitors/airvisual-platform/api
 
 ## Technologies Used 
-* NestJS
-* MongoDB
+* Node (NestJS)
+* MongoDB (Mongoose) 
 * Swagger Docs
 
 
@@ -24,8 +24,13 @@ $ npm run start:dev
 
 ```
 
-## Test
+## Testing
 
+1-  Run The APP
+```bash
+$ npm run start
+```
+2- Open new Terminal and Run The Following
 ```bash
 # unit tests
 $ npm run test
@@ -33,7 +38,11 @@ $ npm run test
 # test coverage
 $ npm run test:cov
 ```
-
+* Note: If You need to run Air Quality Tests only 
+```bash
+# unit tests
+$ npm run test src/air/air.controller.speec.ts
+```
 
 ## Endpoints
 

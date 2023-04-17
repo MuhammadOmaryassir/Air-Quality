@@ -49,7 +49,6 @@ export class AirService {
   async mostPollutedTimeParisZone(): Promise<PollutionDocument[]> {
     try {
 
-      //this find the max value of aqius and give the new one
       const MostPollutedQuery = {"city":"Paris"}
     
       let most_polluted = await this.AirQualityRecordModel.find(MostPollutedQuery).sort({ aqius: -1, ts: -1 }).limit(1).exec()
